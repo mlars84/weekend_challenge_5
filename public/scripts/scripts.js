@@ -14,6 +14,7 @@ myApp.controller('MovieController', function($http) {
       method: 'GET',
       url: 'http://www.omdbapi.com/?s=' + vm.searchIn
     }).then(function(response) {
+      console.log(response);
       vm.movieToDisplay = response.data.Search;
     });
   };
