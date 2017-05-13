@@ -5,11 +5,16 @@ myApp.controller('MovieController', function($http) {
 
   var vm = this;
 
-  vm.getFilms = function() {
-    console.log('in getFilms');
-  };
+  vm.movieToDisplay = [];
 
+  //function to get films from OMDB based on user search
   vm.searchOmdb = function() {
-    console.log('button clicked');
+    console.log('in searchOmdb');
+    $http({
+      method: 'GET',
+      url: 'http://www.omdbapi.com/?s=' + vm.searchIn
+    }).then(function(response) {
+      vm.movieToDisplay = response.data.Search;
+    });
   };
 });

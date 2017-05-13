@@ -2,7 +2,7 @@
 ---
 - [X] Initialize project directories, files and dependencies.
 - [X] Full MEAN stack back to front set up and initial tests
-- [] Main view with input and submit button
+- [X] Main view with input and submit button
 - [] $http get to OMDB
 - [] response comes back as object and displays immediately
 - [] add to favs button (eventually have favs be the second view)
