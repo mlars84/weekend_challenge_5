@@ -6,9 +6,11 @@
 - [X] $http get to OMDB
 - [X] response comes back as object and displays immediately
 - [] add to favs button (eventually have favs be the second view)
+- [] get favs from DOM and POST them
 - [] store favs in MongoDB
 - [] Two views, one for search and display movie info with input/submit button
 - [] HARD Remove movie from DB and favs list
+- [] PRO host it on heroku and mLabs
 
 
 

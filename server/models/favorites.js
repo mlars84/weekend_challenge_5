@@ -2,9 +2,9 @@ var express = require('express');
 var mongoose = require('mongoose');
 
 var favSchema = mongoose.Schema({
-  Title: String,
-  Year: Number,
-  Poster: String
+  title: String,
+  year: Number,
+  poster: String
 });
 
 var favorites = mongoose.model('favorites', favSchema);
