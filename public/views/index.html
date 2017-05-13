@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="vendors/bootstrap.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
+  <body ng-app="myApp">
     <div class="jumbotron"><h1>Find a Film</h1></div>
+    <div ng-controller="MovieController as mc" ng-int="mc.getFilms()">
+      
+    </div>
   </body>
 </html>
