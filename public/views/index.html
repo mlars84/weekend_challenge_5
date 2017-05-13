@@ -11,7 +11,8 @@
   <body ng-app="myApp">
     <div class="jumbotron"><h1>Find a Film</h1></div>
     <div ng-controller="MovieController as mc" ng-int="mc.getFilms()">
-      
+      <input ng-model="mc.searchIn" type="text" placeholder="Search" value="">
+      <button ng-click="mc.searchOmdb()" type="button" class="btn">Submit</button>
     </div>
   </body>
 </html>
