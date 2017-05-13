@@ -3,8 +3,8 @@
 - [X] Initialize project directories, files and dependencies.
 - [X] Full MEAN stack back to front set up and initial tests
 - [X] Main view with input and submit button
-- [] $http get to OMDB
-- [] response comes back as object and displays immediately
+- [X] $http get to OMDB
+- [X] response comes back as object and displays immediately
 - [] add to favs button (eventually have favs be the second view)
 - [] store favs in MongoDB
 - [] Two views, one for search and display movie info with input/submit button
