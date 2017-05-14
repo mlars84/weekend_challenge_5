@@ -1,9 +1,10 @@
-<h2>Favorites List:</h2>
-<button ng-click="mc.getFavs()"type="button" name="button">Show Favorites</button>
-<div class="container row">
-  <div ng-repeat="fav in mc.favsToDisplay" class="col-xs-3">
-   <h2>{{fav.Title}}</h2>
-   <h3>{{fav.Year}}</h3>
-   <img ng-src="{{fav.Poster}}">
- </div>
+<h1>Your Favorites:</h1>
+<div ng-controller="FavoritesController as fc" ng-init="fc.getFavs()">
+  <button ng-click="fc.getFavs()" type="button" class="btn">Submit</button>
+  <div class="container row">
+   <div ng-repeat="fav in fc.favsToDisplay" class="col-xs-3">
+       <h2>{{fav.title}}</h2>
+       <h3>{{fav.year}}</h3>
+       <img ng-src="{{fav.poster}}">
+   </div>
 </div>

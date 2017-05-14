@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "angular-router",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.4",
-    "angular-route": "^1.6.4",
     "body-parser": "^1.17.1",
     "bootstrap": "^3.3.7",
     "express": "^4.15.2",

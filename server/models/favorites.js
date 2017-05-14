@@ -4,8 +4,7 @@ var mongoose = require('mongoose');
 var favSchema = mongoose.Schema({
   title: String,
   year: Number,
-  poster: String,
-  id: Number
+  poster: String
 });
 
 var favorites = mongoose.model('favorites', favSchema);
