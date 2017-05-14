@@ -7,3 +7,9 @@
 body {
   background-color: #e2dad8;
 }
+
+img {
+  height: 350px;
+  width: 250px;
+  border: 1px solid black;
+}
