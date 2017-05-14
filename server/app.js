@@ -16,7 +16,7 @@ app.use(express.static('public'));
 app.use('/favoriteMovies', favMoviesRoutes);
 
 //base url hit
-app.get('/', function(req, res) {
+app.get('/*', function(req, res) {
   res.sendFile(path.resolve('public/views/index.html'));
 });
 

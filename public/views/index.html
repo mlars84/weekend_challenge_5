@@ -4,29 +4,22 @@
     <meta charset="utf-8">
     <title>Find a Film</title>
     <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="vendors/anular-route.min.js" charset="utf-8"></script>
     <script src="scripts/scripts.js" charset="utf-8"></script>
     <link rel="stylesheet" href="vendors/bootstrap.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <base href="/">
   </head>
   <body ng-app="myApp">
     <div class="jumbotron"><h1>Find a Film</h1></div>
-    <div ng-controller="MovieController as mc">
-      <input ng-model="mc.searchIn" type="text" placeholder="Search" value="">
-      <button ng-click="mc.searchOmdb()" type="button" class="btn">Submit</button>
-      <div class="container">
-       <div ng-repeat="film in mc.movieToDisplay" class="col-xs-3">
-           <h2>{{film.Title}} <button ng-click="mc.addFavs(film.Title, film.Year, film.Poster, film.imdbID)" class="btn">Add to Favs</button></h2>
-           <h3>{{film.Year}}</h3>
-           <img ng-src="{{film.Poster}}">
-       </div>
-       <h2>Favorites List:</h2>
-       <button ng-click="mc.getFavs()"type="button" name="button">Show Favorites</button>
-       <div class="container row">
-       <div ng-repeat="fav in mc.favsToDisplay" class="col-xs-3">
-         <div>{{}}</div>
-       </div>
-       </div>
-     </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/search">Search for your Favorite Films on OMDB!</a></li>
+        <li><a href="/favorites">Your favorites</a></li>
+      </ul>
+    </nav>
+    <ng-view></ng-view>
     </div>
   </body>
 </html>

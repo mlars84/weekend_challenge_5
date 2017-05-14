@@ -1,4 +1,19 @@
-var myApp = angular.module('myApp', []);
+var myApp = angular.module('myApp', ['ngRoute']);
+
+myApp.config(function($routeProvider, $locationProvider) {
+  $routeProvider.when('/', {
+    template: '<div>This is the default</div>',
+    controller: 'MovieController as mc'
+  }).when('/search', {
+    templateUrl: 'views/pages/search.html',
+    controller: 'SearchController as sc'
+  }).when('/favorites', {
+    templateUrl: 'views/pages/favorites.html',
+    controller: 'FavoritesController as fc'
+  }).otherwise('/');
+
+  $locationProvider.html5Mode(true);
+}); //end config
 
 myApp.controller('MovieController', function($http) {
   console.log('NG');
@@ -48,6 +63,7 @@ myApp.controller('MovieController', function($http) {
     }).then(function(response) {
       console.log(response.data);
       vm.favsToDisplay = response.data;
+      console.log(vm.favsToDisplay);
     });
   }; //end getFavorites
 }); //end controller

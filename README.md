@@ -8,7 +8,7 @@
 - [X] add to favs button (eventually have favs be the second view)
 - [X] get favs from DOM and POST them
 - [X] store favs in MongoDB
-- [] GET to bring back favorites from DB and post them
+- [] GET to bring back favorites from DB and display them
 - [] Two views, one for search and display movie info with input/submit button
 - [] HARD Remove movie from DB and favs list
 - [] PRO host it on heroku and mLabs

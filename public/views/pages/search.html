@@ -1,0 +1,10 @@
+<div ng-controller="MovieController as mc">
+  <input ng-model="mc.searchIn" type="text" placeholder="Search" value="">
+  <button ng-click="mc.searchOmdb()" type="button" class="btn">Submit</button>
+  <div class="container row">
+   <div ng-repeat="film in mc.movieToDisplay" class="col-xs-3">
+       <h2>{{film.Title}} <button ng-click="mc.addFavs(film.Title, film.Year, film.Poster, film.imdbID)" class="btn">Add to Favs</button></h2>
+       <h3>{{film.Year}}</h3>
+       <img ng-src="{{film.Poster}}">
+   </div>
+</div>
