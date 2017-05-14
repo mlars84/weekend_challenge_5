@@ -4,6 +4,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 var db = require('./modules/db');
+var favMoviesRoutes = require('./routes/allMovies');
 
 //globals
 var port = process.env.PORT || 2333;
@@ -12,6 +13,7 @@ var port = process.env.PORT || 2333;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use('/favoriteMovies', favMoviesRoutes);
 
 //base url hit
 app.get('/', function(req, res) {

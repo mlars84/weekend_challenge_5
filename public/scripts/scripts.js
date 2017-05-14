@@ -19,22 +19,22 @@ myApp.controller('MovieController', function($http) {
     });
   }; //end searchOmdb function
 
-  vm.addFavs = function(title, year, poster) {
+  vm.addFavs = function(title, year, poster, id) {
     console.log('addFavs button clicked');
-    console.log(title, year, poster);
+    console.log(title, year, poster, id);
     vm.favToSend = {
       title: title,
       year: year,
-      poster: poster
+      poster: poster,
+      id: id
     };
-    console.log(favToSend);
-
+    console.log(vm.favToSend);
     $http({
       method: 'POST',
-      url:'/allMovies',
-      data: favToSend
+      url:'/favoriteMovies',
+      data: vm.favToSend
     }).then(function(response){
       console.log(response);
     });
-  };
+  }; //end addFavs function
 });
