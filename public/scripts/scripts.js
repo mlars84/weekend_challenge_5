@@ -7,6 +7,8 @@ myApp.controller('MovieController', function($http) {
 
   vm.movieToDisplay = [];
 
+  vm.favsToDisplay = [];
+
   //function to get films from OMDB based on user search
   vm.searchOmdb = function() {
     console.log('in searchOmdb');
@@ -37,4 +39,15 @@ myApp.controller('MovieController', function($http) {
       console.log(response);
     });
   }; //end addFavs function
-});
+
+  vm.getFavs = function() {
+    console.log('get favs button');
+    $http({
+      method: 'GET',
+      url: '/favoriteMovies'
+    }).then(function(response) {
+      console.log(response.data);
+      vm.favsToDisplay = response.data;
+    });
+  }; //end getFavorites
+}); //end controller

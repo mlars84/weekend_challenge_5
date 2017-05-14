@@ -13,4 +13,12 @@ router.post('/', function(req, res) {
   });
 });
 
+router.get('/', function(req, res) {
+  console.log('GET Router for fav movies');
+  favoritesModel.favorites.find().then(function(data){
+    console.log('data', data);
+    res.send(data);
+  });
+});
+
 module.exports = router;

@@ -7,7 +7,7 @@ var db = require('./modules/db');
 var favMoviesRoutes = require('./routes/allMovies');
 
 //globals
-var port = process.env.PORT || 2333;
+var port = process.env.PORT || 8080;
 
 //uses
 app.use(bodyParser.urlencoded({extended:true}));
