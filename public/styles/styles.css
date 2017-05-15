@@ -1,15 +1,28 @@
 .jumbotron {
   text-align: center;
   background-color: #7b5b46;
-  color: white;
+  color: #c71c0b;
+  text-shadow: 5px 5px 10px #fdde4d;
+  background-image: url('http://nofilmschool.com/sites/default/files/styles/article_wide/public/uploads/2014/03/Criterion-Collection.jpg?itok=yM5eeCin');
 }
 
 body {
-  background-color: #e2dad8;
+  background-color: #c71c0b;
+  background-image: url('http://cdn.wallpapersafari.com/50/86/xVAepl.jpg');
 }
 
 img {
   height: 350px;
   width: 250px;
   border: 1px solid black;
+}
+
+#homeImg {
+  height: 1000px;
+  width: 1200px;
+  border: 1px solid black;
+}
+
+h1, h2, h3, p {
+  color: #fdde4d
 }
