@@ -1,5 +1,6 @@
 var express = require('express');
 var mongoose = require('mongoose');
+//var Schema = mongoose.Schema;
 
 var favSchema = mongoose.Schema({
   title: String,

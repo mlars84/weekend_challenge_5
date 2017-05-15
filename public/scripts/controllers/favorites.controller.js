@@ -6,6 +6,8 @@ myApp.controller('FavoritesController', ['favsService', function(favsService) {
 
   service.getFavs = favsService.getFavs;
 
+  service.favsToDisplay = favsService.favsToDisplay;
+
   service.deleteFav = favsService.deleteFav;
 
 }]); //end FavoritesController

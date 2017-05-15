@@ -5,6 +5,8 @@ var service = this; //setting service so that 'this' never refers to the wrong t
 //this connects the view and controller to service
 service.searchOmdb = searchService.searchOmdb;
 
+service.movieToDisplay = searchService.movieToDisplay;
+
 //this connects the view and controller to the service
 service.addFavs = searchService.addFavs;
 
