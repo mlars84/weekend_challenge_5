@@ -6,6 +6,10 @@
   background-image: url('http://nofilmschool.com/sites/default/files/styles/article_wide/public/uploads/2014/03/Criterion-Collection.jpg?itok=yM5eeCin');
 }
 
+li {
+  font-size: 18px;
+}
+
 body {
   background-color: #c71c0b;
   background-image: url('http://cdn.wallpapersafari.com/50/86/xVAepl.jpg');
