@@ -1,7 +1,7 @@
 myApp.service('favsService', ['$http', function($http) {
     var service = this;
 
-    service.favsToDisplay = [];
+    service.favsToDisplay = { list: [] };
 
     console.log('FavoritesController');
     // getFavs function to get favorites from MongoDB
@@ -12,7 +12,7 @@ myApp.service('favsService', ['$http', function($http) {
         url: '/favoriteMovies'
       }).then(function(response) {
         console.log(response.data);
-        service.favsToDisplay = response.data;
+        service.favsToDisplay.list = response.data;
         console.log(service.favsToDisplay);
       });
     }; //end getFavorites

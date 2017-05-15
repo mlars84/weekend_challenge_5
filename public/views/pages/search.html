@@ -4,7 +4,7 @@
   <button ng-click="sc.searchOmdb(sc.searchIn)" type="button" class="btn btn-primary">Submit</button>
   <div class="container row">
    <div ng-repeat="film in sc.movieToDisplay.details" class="col-md-4">
-       <h2>{{film.Title}} <button ng-click="sc.addFavs(film.Title, film.Year, film.Poster, film.imdbID)" class="btn">Add to Favs</button></h2>
+       <h2>{{film.Title}} <button ng-click="sc.addFavs(film.Title, film.Year, film.Poster, film.imdbID)" class="btn btn-primary">Add to Favs</button></h2>
        <h3>{{film.Year}}</h3>
        <img ng-src="{{film.Poster}}">
    </div>
