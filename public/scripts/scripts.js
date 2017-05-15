@@ -1,5 +1,6 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 
+//ng function to provide routes and estabish controllers
 myApp.config(function($routeProvider, $locationProvider) {
   $routeProvider.when('/', {
     template: '<h1>Click on search to search for your favorite films!</h1>',
@@ -16,6 +17,8 @@ myApp.config(function($routeProvider, $locationProvider) {
 }); //end config
 
 
+
+//default controller for home page
 myApp.controller('DefaultController', function() {
   console.log('DefaultController');
 }); //end DefaultController

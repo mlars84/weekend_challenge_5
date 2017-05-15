@@ -1,10 +1,10 @@
-myApp.service('FavsService', function($http) {
-  myApp.controller('FavoritesController', function() {
+myApp.service('favsService', ['$http', function($http) {
     var service = this;
 
     service.favsToDisplay = [];
 
     console.log('FavoritesController');
+    // getFavs function to get favorites from MongoDB
     service.getFavs = function() {
       console.log('get favs button');
       $http({
@@ -17,6 +17,7 @@ myApp.service('FavsService', function($http) {
       });
     }; //end getFavorites
 
+    // deleteFav function to delete favorite from DOM and MongoDB
     service.deleteFav = function(id) {
       console.log('delete button clicked', id);
       $http({
@@ -27,6 +28,4 @@ myApp.service('FavsService', function($http) {
         service.getFavs();
       });
     }; //end deleteFav
-  }); //end FavoritesController
-
-});
+}]); //end FavsService service

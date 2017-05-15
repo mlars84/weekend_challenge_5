@@ -1,4 +1,4 @@
-myApp.service('searchService', ['http', function($http) {
+myApp.service('searchService', ['$http', function($http) {
 
     var service = this; //refers to main service function
 
