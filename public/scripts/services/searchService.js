@@ -2,17 +2,17 @@ myApp.service('searchService', ['$http', function($http) {
 
     var service = this; //refers to main service function
 
-    service.movieToDisplay = [];
+    service.movieToDisplay = { details: [] };
 
     //function to get films from OMDB based on user search
     service.searchOmdb = function(searchIn) {
-      console.log('in searchOmdb');
+      console.log('in searchOmdb', searchIn);
       $http({
         method: 'GET',
-        url: 'http://www.omdbapi.com/?s=' + service.searchIn
+        url: 'http://www.omdbapi.com/?s=' + searchIn
       }).then(function(response) {
-        console.log(response);
-        service.movieToDisplay = response.data.Search;
+        console.log(response.data.Search);
+        service.movieToDisplay.details = response.data.Search;
       });
     }; //end searchOmdb function
 

@@ -1,6 +1,6 @@
 //controller that connects to favorites.services and favorites.html
 myApp.controller('FavoritesController', ['favsService', function(favsService) {
-  console.log('FavoritesController');
+  console.log('Made it to FavoritesController');
 
   var service = this;
 

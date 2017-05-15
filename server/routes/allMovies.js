@@ -1,6 +1,8 @@
 //requires
 var express = require('express');
 var router = express.Router();
+//another option to make router...
+//var router = require('express').Router();
 var mongoose = require('mongoose');
 var favoritesModel = require('../models/favorites');
 
