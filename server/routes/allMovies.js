@@ -21,4 +21,12 @@ router.get('/', function(req, res) {
   });
 });
 
+router.delete('/:id', function(req, res) {
+  console.log('DELETE from favs router');
+  favoritesModel.favorites.remove({_id: req.params.id}).then(function(){
+    console.log('delete by id', req.params.id);
+    res.sendStatus(200);
+  });
+});
+
 module.exports = router;

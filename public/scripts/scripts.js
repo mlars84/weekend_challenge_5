@@ -71,6 +71,17 @@ myApp.controller('FavoritesController', function($http) {
       console.log(vm.favsToDisplay);
     });
   }; //end getFavorites
+
+  vm.deleteFav = function(id) {
+    console.log('delete button clicked', id);
+    $http({
+      method: 'DELETE',
+      url: '/favoriteMovies/' + id
+    }).then(function(response) {
+      console.log(response);
+      vm.getFavs();
+    });
+  }; //end deleteFav
 }); //end FavoritesController
 
 myApp.controller('DefaultController', function() {
