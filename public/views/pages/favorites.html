@@ -1,9 +1,9 @@
 <h1>Your Favorites:</h1>
 <div ng-controller="FavoritesController as fc" ng-init="fc.getFavs()">
   <div class="container row">
-   <div ng-repeat="fav in fc.favsToDisplay.list" class="col-sm-4">
-       <h2>{{fav.title}}</h2><button ng-click="fc.deleteFav(fav._id)" type="button" class="btn btn-primary">Delete</button>
+   <div ng-repeat="fav in fc.favsToDisplay.list" class="col-xs-12 col-sm-6 col-md-4">
+       <h2>{{fav.title}}</h2><button ng-click="fc.deleteFav(fav._id)" type="button" class="btn btn-primary">Delete from Favorites</button>
        <h3>{{fav.year}}</h3>
        <img ng-src="{{fav.poster}}">
-   </div>
+  </div>
 </div>

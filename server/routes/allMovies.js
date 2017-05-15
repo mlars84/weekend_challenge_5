@@ -23,10 +23,13 @@ router.get('/', function(req, res) {
   });
 });
 
-router.delete('/:id', function(req, res) {
+//delete is coming from deleteFav in favsService and is getting id from object
+//and passing it through using params: {id:id}
+router.delete('/', function(req, res) {
   console.log('DELETE from favs router');
-  favoritesModel.favorites.remove({_id: req.params.id}).then(function(){
-    console.log('delete by id', req.params.id);
+  var idToDelete = req.query.id;
+  favoritesModel.favorites.remove({_id: idToDelete}).then(function(){
+    console.log('delete by id', idToDelete);
     res.sendStatus(200);
   });
 });

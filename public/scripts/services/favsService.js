@@ -22,7 +22,8 @@ myApp.service('favsService', ['$http', function($http) {
       console.log('delete button clicked', id);
       $http({
         method: 'DELETE',
-        url: '/favoriteMovies/' + id
+        url: '/favoriteMovies',
+        params: { id: id }
       }).then(function(response) {
         console.log(response);
         service.getFavs();
