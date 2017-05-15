@@ -10,7 +10,7 @@
 - [X] store favs in MongoDB
 - [X] GET to bring back favorites from DB and display them
 - [X] Two views, one for search and display movie info with input/submit button
-- [] HARD Remove movie from DB and favs list
+- [X] HARD Remove movie from DB and favs list
 - [] PRO host it on heroku and mLabs
 
 
